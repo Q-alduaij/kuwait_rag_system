@@ -1,50 +1,179 @@
-# Core dependencies
+# =============================================================================
+# CORE RAG & AI/ML DEPENDENCIES
+# =============================================================================
+
+# LangChain Ecosystem
 langchain==0.1.0
 langchain-community==0.0.1
 langchain-text-splitters==0.0.1
+langchainhub==0.1.15
+
+# Vector Databases & Similarity Search
 chromadb==0.4.15
+faiss-cpu==1.7.4
 sentence-transformers==2.2.2
-fastapi==0.104.1
-uvicorn==0.24.0
-pydantic==2.5.0
 
-# Document processing
-python-docx==1.1.0
-PyPDF2==3.0.1
-ebooklib==0.18
-beautifulsoup4==4.12.2
-unstructured==0.12.5  # For better file parsing
-
-# AI/ML
+# LLM & Transformers
 transformers==4.35.0
 torch==2.1.0
 accelerate==0.24.1
+bitsandbytes==0.41.3
+peft==0.7.1
 
-# Utilities
-tqdm==4.66.1
-requests==2.31.0
-jsonlines==4.0.0
-python-multipart==0.0.6
-# Enhanced RAG dependencies
+# =============================================================================
+# DOCUMENT PROCESSING & FILE FORMATS
+# =============================================================================
+
+# PDF Processing
+pypdf2==3.0.1
+pymupdf==1.23.0
+pdfplumber==0.10.0
+pdf2image==1.16.3
+
+# Office Documents
+python-docx==1.1.0
+docx2txt==0.8
+openpyxl==3.1.2
+xlrd==2.0.1
+
+# E-books & HTML
+ebooklib==0.18
+beautifulsoup4==4.12.2
+lxml==4.9.3
+
+# Text Processing
+unstructured==0.12.5
+unstructured-inference==0.7.3
+
+# =============================================================================
+# ARABIC NLP & TEXT PROCESSING
+# =============================================================================
+
+# Arabic Text Processing
+arabic-reshaper==3.0.0
+python-bidi==0.4.2
+pyarabic==0.6.14
+
+# Advanced Arabic NLP (optional)
+camel-tools==1.5.1
+    # Note: camel-tools requires additional system dependencies:
+    # sudo apt-get install python3-dev libxml2-dev libxslt1-dev
+
+# =============================================================================
+# RAG EVALUATION & METRICS
+# =============================================================================
+
+# RAG Evaluation Framework
 ragas==0.1.0
-datasets>=2.14.0
-rank-bm25>=0.2.2
-sentence-transformers>=2.2.2
-pytesseract>=0.3.10
-Pillow>=10.0.0
-pymupdf>=1.23.0
-langchain-text-splitters>=0.0.1
-langchain-community>=0.0.1
+datasets==2.14.6
 
-# Evaluation metrics
-rouge-score>=0.1.2
-bert-score>=0.3.13
-weaviate-client>=3.25.0
+# Text Similarity & Metrics
+rouge-score==0.1.2
+bert-score==0.3.13
+nltk==3.8.1
+evaluate==0.4.1
 
-# Arabic NLP
-arabic-reshaper>=3.0.0
-python-bidi>=0.4.2
+# Search & Retrieval
+rank-bm25==0.2.2
 
-# Advanced retrieval
-faiss-cpu>=1.7.4
-chromadb>=0.4.15
+# =============================================================================
+# API & WEB FRAMEWORK
+# =============================================================================
+
+# FastAPI & Web Server
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+pydantic==2.5.0
+
+# HTTP Clients
+requests==2.31.0
+aiohttp==3.9.1
+httpx==0.25.2
+
+# =============================================================================
+# DATA PROCESSING & UTILITIES
+# =============================================================================
+
+# Data Manipulation
+pandas==2.1.3
+numpy==1.24.3
+scikit-learn==1.3.2
+
+# Utilities & Progress Bars
+tqdm==4.66.1
+python-dotenv==1.0.0
+python-dateutil==2.8.2
+
+# Hashing & Security
+cryptography==41.0.7
+pyjwt==2.8.0
+
+# File Management
+watchdog==3.0.0
+pathlib==1.0.1
+
+# =============================================================================
+# IMAGE PROCESSING (OPTIONAL - FOR OCR)
+# =============================================================================
+
+# OCR & Image Processing
+pytesseract==0.3.10
+pillow==10.1.0
+opencv-python==4.8.1.78
+
+# =============================================================================
+# AUDIO PROCESSING (OPTIONAL - FOR FUTURE EXPANSION)
+# =============================================================================
+
+# Audio Processing
+speechrecognition==3.10.0
+pydub==0.25.1
+librosa==0.10.1
+
+# =============================================================================
+# DEVELOPMENT & TESTING
+# =============================================================================
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+
+# Code Quality
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Logging
+loguru==0.7.2
+structlog==23.2.0
+
+# =============================================================================
+# KUWAIT-SPECIFIC DEPENDENCIES
+# =============================================================================
+
+# Islamic Calendar & Prayer Times
+prayer-times==0.1.2
+hijri-converter==2.2.4
+
+# Arabic Date Handling
+python-hijri==0.4.0
+
+# =============================================================================
+# SYSTEM & PERFORMANCE
+# =============================================================================
+
+# Performance Optimization
+psutil==5.9.6
+memory-profiler==0.61.0
+
+# Process Management
+pytest-xdist==3.5.0
+
+# JSON Handling
+jsonlines==4.0.0
+ujson==5.8.0
+
+# YAML Configuration
+pyyaml==6.0.1
